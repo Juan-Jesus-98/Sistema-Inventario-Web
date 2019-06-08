@@ -13,10 +13,10 @@ namespace Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class inventarioEntities : DbContext
+    public partial class inventariosEntities2 : DbContext
     {
-        public inventarioEntities()
-            : base("name=inventarioEntities")
+        public inventariosEntities2()
+            : base("name=inventariosEntities2")
         {
         }
     
@@ -31,8 +31,8 @@ namespace Model
         public virtual DbSet<Empresas> Empresas { get; set; }
         public virtual DbSet<Impuestos> Impuestos { get; set; }
         public virtual DbSet<Permisos> Permisos { get; set; }
-        public virtual DbSet<Pproductos_Empresa> Pproductos_Empresa { get; set; }
         public virtual DbSet<Productos> Productos { get; set; }
+        public virtual DbSet<Productos_Empresa> Productos_Empresa { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
         public virtual DbSet<Ventas> Ventas { get; set; }
     }

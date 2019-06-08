@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Registrar";
+    Layout = "~/Views/Shared/_LayoutCuentas.cshtml";
+}
+
+
+<div class="signupform">
+    <div class="container">
+        <!-- main content -->
+        <div class="agile_info">
+            <div class="w3l_form">
+                <div class="left_grid_info">
+                    <h1>Crear Una Nueva Cuenta</h1>
+               <img src="~/Contents/images/image.jpg" alt="" />
+                </div>
+            </div>
+            <div class="w3_info">
+                <h2>Ingrese A Su Cuenta</h2>
+                <p>Ingrese sus datos para Crear uns Cuenta.</p>
+                <form class="c-card__body formAjax" action="~/Cuentass/Registrar" method="post">
+                    <div class="input-group">
+                        <span class="fa fa-envelope" aria-hidden="true"></span>
+                        <input type="text" placeholder="Nombre Empresa" name="NombreEmpresa" required="">
+                    </div>
+
+                    <div class="input-group">
+                        <span class="fa fa-envelope" aria-hidden="true"></span>
+                        <input type="email" placeholder="Email" name="CorreoElectronico" required="">
+                    </div>
+
+                    <div class="input-group">
+                        <span class="fa fa-lock" aria-hidden="true"></span>
+                        <input type="Password" placeholder="Contraseña" name="Password" required="">
+                    </div>
+
+                    
+                    <button class="btn btn-danger btn-block btnAjax" type="submit">
+                        Registrar
+
+                    </button>
+                    <div>
+                        <a href="~/Cuentass/Index">Iniciar Sesion</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+     </div>
+</div>
+
+

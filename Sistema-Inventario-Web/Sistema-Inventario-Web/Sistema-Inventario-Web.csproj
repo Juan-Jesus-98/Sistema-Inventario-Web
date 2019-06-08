@@ -50,7 +50,12 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\PagedList.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -107,46 +112,47 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ContentRegistro\css\font-awesome.min.css" />
-    <Content Include="ContentRegistro\css\style.css" />
-    <Content Include="ContentRegistro\images\Fondo.jpg" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\css\font-awesome.min.css" />
-    <Content Include="Content\css\style.css" />
-    <Content Include="Content\images\Fondo4.jpg" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Contents\css\font-awesome.min.css" />
+    <Content Include="Contents\css\style.css" />
+    <Content Include="Contents\images\image.jpg" />
+    <Content Include="Contents\images\load.gif" />
+    <Content Include="Contents\images\tick.png" />
+    <Content Include="Contents\js\Custom.js" />
+    <Content Include="Contents\js\jquery.plugins.js" />
+    <Content Include="Contents\js\main.js" />
+    <Content Include="Contents\js\main.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ContentRegistro\fonts\fontawesome-webfont.eot" />
-    <Content Include="ContentRegistro\fonts\fontawesome-webfont.ttf" />
-    <Content Include="ContentRegistro\fonts\fontawesome-webfont.woff" />
-    <Content Include="ContentRegistro\fonts\fontawesome-webfont.woff2" />
-    <Content Include="ContentRegistro\fonts\FontAwesome.otf" />
-    <Content Include="Content\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Contents\js\jquery.form.min.js.map" />
+    <Content Include="Contents\js\main.min.js.map" />
+    <Content Include="Contents\fonts\fontawesome-webfont.eot" />
+    <Content Include="Contents\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Contents\fonts\fontawesome-webfont.woff" />
+    <Content Include="Contents\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Contents\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Atributos\AtributoAutomatic.cs" />
-    <Compile Include="Cifrado\SessionHelper.cs" />
-    <Compile Include="Controllers\CuentasController.cs" />
+    <Compile Include="Atributos\AutomaticPage.cs" />
+    <Compile Include="CifrarContrasena\Contraseña.cs" />
+    <Compile Include="CifrarContrasena\EnviarCorreo.cs" />
+    <Compile Include="CifrarContrasena\Session.cs" />
+    <Compile Include="Controllers\CuentassController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Cifrado\Contraeña.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -158,9 +164,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_LayoutCuentas.cshtml" />
-    <Content Include="Views\Cuentas\Index.cshtml" />
-    <Content Include="Views\Shared\_LayoutRegistrar.cshtml" />
-    <Content Include="Views\Cuentas\Registrar.cshtml" />
+    <Content Include="Views\Cuentass\Index.cshtml" />
+    <Content Include="Views\Cuentass\Registrar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -170,20 +175,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{3487c5d4-8077-42be-acc2-2c1d2d978b1d}</Project>
-      <Name>Model</Name>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{44C14C46-446E-45A0-88C1-DDDD836258F0}</Project>
+      <Name>Datos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Repositorio2\Repositorio2.csproj">
-      <Project>{17D99610-7EFA-4B0C-93D0-E60F5714E412}</Project>
-      <Name>Repositorio2</Name>
+    <ProjectReference Include="..\EnviarDatos\EnviarDatos.csproj">
+      <Project>{693CFFF0-BC44-49E2-BB7B-61AC437EEA18}</Project>
+      <Name>EnviarDatos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Repositorio\Repositorio.csproj">
-      <Project>{5A6A58BC-FCCC-47B1-A0F6-28601A40D08B}</Project>
-      <Name>Repositorio</Name>
+    <ProjectReference Include="..\ModeloDatos\ModeloDatos.csproj">
+      <Project>{6F18C4E4-D702-4855-A62F-92DF9C93F5B9}</Project>
+      <Name>ModeloDatos</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

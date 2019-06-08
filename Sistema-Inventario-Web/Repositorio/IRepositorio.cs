@@ -15,7 +15,7 @@ namespace Repositorio
         bool Delete<TEntity>(TEntity DeleteEntity) where TEntity : class;
         TEntity FindEntity<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : class;
         IEnumerable<TEntity> FindEntitySet<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : class;
-        IPagedList<TEntity> FindEntitySetPage<TEntity>(Expression<Func<TEntity,bool>>Criteria,Expression<Func<TEntity, string>> order,int page,int pageSize) where TEntity : class;
+        IPagedList<TEntity> FindEntitySetPage<TEntity>(Expression<Func<TEntity,bool>>criteria,Expression<Func<TEntity, string>> order,int page,int pageSize) where TEntity : class;
 
     }
    

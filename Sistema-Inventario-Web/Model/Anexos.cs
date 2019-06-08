@@ -16,7 +16,7 @@ namespace Model
     {
         public int id { get; set; }
         public string Archivo { get; set; }
-        public Nullable<int> Prducto_id { get; set; }
+        public Nullable<int> Productos_id { get; set; }
         public Nullable<bool> Estatus { get; set; }
     
         public virtual Productos Productos { get; set; }

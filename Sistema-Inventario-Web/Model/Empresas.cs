@@ -18,24 +18,23 @@ namespace Model
         public Empresas()
         {
             this.Compras = new HashSet<Compras>();
-            this.Pproductos_Empresa = new HashSet<Pproductos_Empresa>();
+            this.Productos_Empresa = new HashSet<Productos_Empresa>();
         }
     
         public int id { get; set; }
         public string NombreEmpresa { get; set; }
-        public string CorreoElectronico { get; set; }
-        public string telefono { get; set; }
-        public string moneda { get; set; }
+        public string CorreoElectronicos { get; set; }
+        public string Telefono { get; set; }
+        public string Moneda { get; set; }
         public Nullable<int> ZonaHoraria_id { get; set; }
-        public string logo { get; set; }
-        public string direccion { get; set; }
+        public string Logo { get; set; }
+        public string Direccion { get; set; }
         public Nullable<int> Tipo_id { get; set; }
     
         public virtual Catalogo Catalogo { get; set; }
-        public virtual Catalogo Catalogo1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compras> Compras { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Pproductos_Empresa> Pproductos_Empresa { get; set; }
+        public virtual ICollection<Productos_Empresa> Productos_Empresa { get; set; }
     }
 }

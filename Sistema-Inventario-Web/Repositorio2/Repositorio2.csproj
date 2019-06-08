@@ -66,13 +66,10 @@
     <Content Include="Content\PagedList.css" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Repositorio\Repositorio.csproj">
-      <Project>{5A6A58BC-FCCC-47B1-A0F6-28601A40D08B}</Project>
-      <Name>Repositorio</Name>
-    </ProjectReference>
+    <Folder Include="Repositorio\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repositorio\" />
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

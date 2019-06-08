@@ -15,12 +15,12 @@ namespace Model
     public partial class Impuestos
     {
         public int id { get; set; }
-        public string Impuesto { get; set; }
-        public Nullable<decimal> Porcentahe { get; set; }
-        public Nullable<decimal> Monto { get; set; }
+        public string Impuestos1 { get; set; }
+        public decimal Porcentaje { get; set; }
+        public decimal Monto { get; set; }
         public Nullable<int> Venta_id { get; set; }
         public Nullable<int> Compra_id { get; set; }
-        public Nullable<int> Estatus { get; set; }
+        public bool Estatus { get; set; }
     
         public virtual Compras Compras { get; set; }
         public virtual Ventas Ventas { get; set; }

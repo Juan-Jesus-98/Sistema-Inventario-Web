@@ -19,7 +19,7 @@ namespace Model
         {
             this.Anexos = new HashSet<Anexos>();
             this.Compras = new HashSet<Compras>();
-            this.Pproductos_Empresa = new HashSet<Pproductos_Empresa>();
+            this.Productos_Empresa = new HashSet<Productos_Empresa>();
             this.Ventas = new HashSet<Ventas>();
         }
     
@@ -28,17 +28,22 @@ namespace Model
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public string Marca { get; set; }
+        public string Modelo { get; set; }
+        public string UnidadMedida { get; set; }
+        public Nullable<bool> Estatus { get; set; }
+        public Nullable<decimal> Costo { get; set; }
+        public Nullable<int> Unidad { get; set; }
         public Nullable<decimal> PrecioVenta { get; set; }
         public Nullable<int> Stock { get; set; }
         public Nullable<System.DateTime> FechaRegistro { get; set; }
-        public Nullable<System.DateTime> FechaActivo { get; set; }
+        public Nullable<System.DateTime> FechaArtivo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Anexos> Anexos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compras> Compras { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Pproductos_Empresa> Pproductos_Empresa { get; set; }
+        public virtual ICollection<Productos_Empresa> Productos_Empresa { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ventas> Ventas { get; set; }
     }

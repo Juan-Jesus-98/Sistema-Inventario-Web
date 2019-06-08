@@ -23,14 +23,13 @@ namespace Model
         public int id { get; set; }
         public string CorreoElectronico { get; set; }
         public string Password { get; set; }
-        public int Empresaid { get; set; }
+        public Nullable<int> Empresaid { get; set; }
         public string Telefono { get; set; }
         public string Nombres { get; set; }
-        public System.DateTime Fecha { get; set; }
-        public bool Activo { get; set; }
-        public int Rol_id { get; set; }
+        public Nullable<bool> Activo { get; set; }
+        public Nullable<System.DateTime> Fecha { get; set; }
+        public Nullable<int> Rol_id { get; set; }
     
-        public virtual Catalogo Catalogo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ventas> Ventas { get; set; }
     }

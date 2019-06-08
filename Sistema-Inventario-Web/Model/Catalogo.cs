@@ -18,8 +18,7 @@ namespace Model
         public Catalogo()
         {
             this.Empresas = new HashSet<Empresas>();
-            this.Empresas1 = new HashSet<Empresas>();
-            this.Usuarios = new HashSet<Usuarios>();
+            this.Permisos = new HashSet<Permisos>();
         }
     
         public int id { get; set; }
@@ -30,9 +29,6 @@ namespace Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Empresas> Empresas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Empresas> Empresas1 { get; set; }
-        public virtual Permisos Permisos { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuarios> Usuarios { get; set; }
+        public virtual ICollection<Permisos> Permisos { get; set; }
     }
 }
